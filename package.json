@@ -1,0 +1,19 @@
+{
+  "name": "shower-watch",
+  "version": "0.1.0",
+  "description": "Save water by visualizing how much water you use in the shower",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gotylergo/shower-watch.git"
+  },
+  "author": "Tyler Kocheff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gotylergo/shower-watch/issues"
+  },
+  "homepage": "https://github.com/gotylergo/shower-watch#readme"
+}
