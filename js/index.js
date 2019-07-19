@@ -3,7 +3,6 @@ let gpm = 2.5;
 
 let setGallons = function() {
   gallons = gallons + (gpm/60);
-  console.log(gallons/60);
   document.getElementById('timer').innerHTML = gallons.toFixed(2);
 }
 
