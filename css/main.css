@@ -27,6 +27,16 @@ button {
 #start {
   margin: 1em auto;
 }
+#timer {
+  display: none;
+  text-align: center;
+}
+#timer h2 {
+  margin-bottom: 0;
+}
+#timer p {
+  margin-top: 0;
+}
 a,
 a:visited,
 a:active {
@@ -34,4 +44,8 @@ a:active {
 }
 a:hover {
   color: #ccc;
+}
+footer {
+  padding-top: 1em;
+  text-align: center;
 }
