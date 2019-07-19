@@ -24,7 +24,7 @@ button {
   line-height: 2em;
   width: 100%;
 }
-#start {
+#startButton {
   margin: 1em auto;
 }
 #timer {
@@ -36,6 +36,9 @@ button {
 }
 #timer p {
   margin-top: 0;
+}
+#resetButton {
+  display: none;
 }
 a,
 a:visited,
