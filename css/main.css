@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 1.25em;
   color: #fff;
-  background-color: slategray;
+  background-color: #00838f;
   margin: 5%;
 }
 label {
@@ -18,7 +18,7 @@ input {
 }
 button {
   display: border-box;
-  background: lightsalmon;
+  background: #ff4081;
   border-radius: 10px;
   border: 0;
   line-height: 2em;
@@ -30,8 +30,8 @@ button {
 a,
 a:visited,
 a:active {
-  color: lightsalmon;
+  color: #fff;
 }
-footer {
-
+a:hover {
+  color: #ccc;
 }
