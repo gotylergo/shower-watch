@@ -27,14 +27,14 @@ button {
 #startButton {
   margin: 1em auto;
 }
-#timer {
+#timerScreen {
   display: none;
   text-align: center;
 }
-#timer h2 {
+#timerScreen h2 {
   margin-bottom: 0;
 }
-#timer p {
+#timerScreen p {
   margin-top: 0;
 }
 #resetButton {

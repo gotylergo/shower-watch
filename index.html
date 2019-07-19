@@ -12,13 +12,13 @@
 <body>
   <h1>Shower Watch</h1>
   <main>
-    <div id="startScreen" onclick="startTimer()">
+    <div id="startScreen">
       <label for="gpm">How many gallons does your showerhead use? </label>
-      <input type="number" name="gpm" value="2.5" />
-      <button id="startButton">Start</button>
+      <input type="number" id="gpm" name="gpm" value="2.1" />
+      <button id="startButton" onclick="startTimer()">Start</button>
     </div>
-    <div id="timer">
-      <h2>0</h2>
+    <div id="timerScreen">
+      <h2 id="timer">0</h2>
       <p>gallons</p>
       <button id="stopButton" onclick="stopTimer()">Stop</button>
       <button id="resetButton" onclick="resetTimer()">Reset</button>
