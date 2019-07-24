@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.5em;
   color: #fff;
   background-color: #00838f;
   margin: 5%;
@@ -19,10 +19,12 @@ input {
 button {
   display: border-box;
   background: #ff4081;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 0;
+  font-size: 1em;
   line-height: 2em;
   width: 100%;
+  color: #333;
 }
 #startButton {
   margin: 1em auto;
@@ -32,6 +34,7 @@ button {
   text-align: center;
 }
 #timerScreen h2 {
+  font-size: 3em;
   margin-bottom: 0;
 }
 #timerScreen p {
