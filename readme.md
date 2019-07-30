@@ -1,6 +1,6 @@
 # Shower-Watch
 
-Save water by visualizing how much water you use in the shower.
+Javascript web app to visualize showertime water usage.
 
 ## Instructions
 
