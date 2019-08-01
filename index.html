@@ -6,6 +6,7 @@
   <title></title>
   <meta name="description" content="Save water by visualizing how much water you use in the shower">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -18,8 +19,9 @@
       <button id="startButton" onclick="startTimer()">Start</button>
     </div>
     <div id="timerScreen">
-      <h2 id="timer">0</h2>
+      <h2 id="gallonTimer">0</h2>
       <p>gallons</p>
+      <h3 id="timer"><i class="fas fa-stopwatch"></i> <span id="minutes">0</span>:<span id="seconds">00</span></h3>
       <button id="stopButton" onclick="stopTimer()">Stop</button>
       <button id="resetButton" onclick="resetTimer()">Reset</button>
     </div>
