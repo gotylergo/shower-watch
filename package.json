@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gotylergo/shower-watch/issues"
   },
-  "homepage": "https://github.com/gotylergo/shower-watch#readme"
+  "homepage": "https://github.com/gotylergo/shower-watch#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
