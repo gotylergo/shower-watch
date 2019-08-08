@@ -38,6 +38,11 @@ function stopTimer() {
   clearInterval(myTimer);
   document.getElementById('stopButton').style.display = "none";
   document.getElementById('resetButton').style.display = "block";
+  document.getElementById('saveButton').style.display = "block";
+}
+
+function save() {
+  alert(`Used ${gallons.toFixed(2)} gallons in ${time} seconds`);
 }
 
 function resetTimer() {
@@ -45,6 +50,19 @@ function resetTimer() {
   document.getElementById('startScreen').style.display = "block";
   document.getElementById('stopButton').style.display = "block";
   document.getElementById('resetButton').style.display = "none";
+  document.getElementById('saveButton').style.display = "none";
+
+  fetch('/api', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({query: "{ getTimes }"})
+    ,
+  })
+  .then(res => res.json())
+  .then(data => console.log('Data returned:', data));
 
   gallons = 0;
   gpm = 2.5;

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body onload="resetTimer()">
   <h1>Shower Watch</h1>
   <main>
     <div id="startScreen">
@@ -24,6 +24,7 @@
       <h3 id="timer"><i class="fas fa-stopwatch"></i> <span id="minutes">0</span>:<span id="seconds">00</span></h3>
       <button id="stopButton" onclick="stopTimer()">Stop</button>
       <button id="resetButton" onclick="resetTimer()">Reset</button>
+      <button id="saveButton" onclick="save()">Save</button>
     </div>
   </main>
   <footer>

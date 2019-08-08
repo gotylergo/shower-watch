@@ -19,6 +19,7 @@ input {
 }
 button {
   display: border-box;
+  margin-bottom: .5em;
   background: #ff4081;
   border-radius: 20px;
   border: 0;
@@ -42,6 +43,9 @@ button {
   margin-top: 0;
 }
 #resetButton {
+  display: none;
+}
+#saveButton {
   display: none;
 }
 a,
