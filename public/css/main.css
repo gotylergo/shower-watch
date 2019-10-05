@@ -5,9 +5,11 @@ body {
   background-color: #00838f;
   margin: 5%;
 }
+
 label {
   font-size: .8em;
 }
+
 input {
   display: border-box;
   border-radius: 10px;
@@ -17,6 +19,7 @@ input {
   width: 100%;
   text-align: center;
 }
+
 button {
   display: border-box;
   margin-bottom: .5em;
@@ -28,34 +31,55 @@ button {
   width: 100%;
   color: #333;
 }
+
 #startButton {
   margin: 1em auto;
 }
+
 #timerScreen {
   display: none;
   text-align: center;
 }
+
 #timerScreen h2 {
   font-size: 3em;
   margin-bottom: 0;
 }
+
 #timerScreen p {
   margin-top: 0;
 }
 #resetButton {
   display: none;
 }
+
 #saveButton {
   display: none;
 }
+
+#savedShowers {
+  width: 100%;
+}
+
+#savedShowers th {
+  text-align: left;
+}
+
+.saved-time-row {
+  font-weight: bold;
+  color: hotpink;
+}
+
 a,
 a:visited,
 a:active {
   color: #fff;
 }
+
 a:hover {
   color: #ccc;
 }
+
 footer {
   padding-top: 1em;
   text-align: center;

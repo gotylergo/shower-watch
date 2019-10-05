@@ -8,18 +8,20 @@ let setGallons = function () {
   gallons = gallons + (gpm / 60);
   document.getElementById('gallonTimer').innerHTML = gallons.toFixed(2);
 }
+
 let setTimer = function () {
   time = time + 1;
   minutes = Math.floor(time / 60);
   seconds = time % 60;
   if (seconds < 10) {
     seconds = "0" + seconds.toString();
-  } 
+  }
   document.getElementById('minutes').innerHTML = minutes;
   document.getElementById('seconds').innerHTML = seconds;
 }
 
 let myGallonTimer = function () { };
+
 let myTimer = function () { };
 
 function startTimer() {
@@ -52,18 +54,47 @@ function resetTimer() {
   document.getElementById('resetButton').style.display = "none";
   document.getElementById('saveButton').style.display = "none";
 
-  fetch('/api', {
+  gallons = 0;
+  gpm = 2.5;
+  document.getElementById('savedShowers').innerHTML = savedShowersHeaderHTML();
+  getSavedShowers();
+}
+
+function savedShowersHeaderHTML() {
+  return '<tr id="savedShowersHeader"><th>Gallons</th><th>Time</th><th>GPM</th></tr>'
+}
+
+function savedShowerHTML(gallons, time, gps) {
+  return `<tr class="saved-time-row"><td>${gallons}</td><td>${time}</td><td>${gps}</td></tr>`
+}
+
+function getSavedShowers() {
+
+  fetch('/api/times', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     },
-    body: JSON.stringify({query: "{ getTimes }"})
+    body: JSON.stringify({ query: "{ getTimes }" })
     ,
   })
-  .then(res => res.json())
-  .then(data => console.log('Data returned:', data));
+    .then(res => res.json())
+    .then(data => console.log('Data returned:', data));
 
-  gallons = 0;
-  gpm = 2.5;
+  fetch('/api/test', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+  })
+    .then(res => res.json())
+    .then(function (data) {
+      console.log('Data returned:', data);
+      data.forEach(function (shower) {
+        console.log(shower);
+        document.getElementById('savedShowers').innerHTML += savedShowerHTML(shower.gallons, shower.time, shower.gps);
+      });
+    });
 }
